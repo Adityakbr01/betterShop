@@ -15,7 +15,7 @@ export default function SearchButton({ onClick, defaultSearch }: SearchButtonPro
       >
         <Search size={18} aria-hidden="true" />
       </button>
-      <p className="uppercase font-GeistRegular text-gray-900">
+      <p className="uppercase hidden md:flex font-GeistRegular text-gray-900">
         {defaultSearch}
       </p>
     </div>

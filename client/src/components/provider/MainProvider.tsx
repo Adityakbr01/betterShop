@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Navbar from "@/components/navbar";
+import LenisProvider from "./LenisProvider";
 
 export default function MainProvider({
     children,
@@ -11,12 +12,14 @@ export default function MainProvider({
     return (
         <ThemeProvider
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
         >
-            <Navbar />
-            {children}
+            <LenisProvider>
+                <Navbar />
+                {children}
+            </LenisProvider>
         </ThemeProvider>
     );
 }

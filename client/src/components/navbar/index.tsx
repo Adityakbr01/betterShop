@@ -11,18 +11,18 @@ const DEFAULT_SEARCH = "T shirt"; // Default search value
 
 export default function Navbar() {
     const [cartOpen, setCartOpen] = useState(false);
-    const [searchOpen, setSearchOpen] = useState(true);
+    const [searchOpen, setSearchOpen] = useState(false);
 
     return (
         <>
 
 
             <header
-                className="w-full fixed top-0 z-50 bg-white text-black shadow-md font-NeuMechina"
+                className="w-full fixed top-0 z-50 bg-white text-black font-NeuMechina"
                 role="banner"
             >
                 <nav
-                    className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3"
+                    className="max-w-7xl mx-auto flex items-center justify-between px-2 sm:px-6 py-3"
                     role="navigation"
                     aria-label="Main Navigation"
                 >

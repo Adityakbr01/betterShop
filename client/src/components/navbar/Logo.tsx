@@ -17,7 +17,7 @@ export default function Logo() {
         />
         <div className="relative z-10 flex flex-col items-center gap-1">
           <motion.h1
-            className="text-3xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-black via-gray-800 to-gray-900 bg-[length:200%_100%]"
+            className="md:text-3xl text-xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-black via-gray-800 to-gray-900 bg-[length:200%_100%]"
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
           >
