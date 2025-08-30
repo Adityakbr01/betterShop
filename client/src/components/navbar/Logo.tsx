@@ -23,7 +23,7 @@ export default function Logo() {
           >
             BetterShop
           </motion.h1>
-          <span className="text-xs text-black -mt-1">Premium Clothing</span>
+          <span className="text-xs -mt-1">Premium Clothing</span>
         </div>
       </div>
     </Link>

@@ -12,7 +12,7 @@ export default function MainProvider({
     return (
         <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
         >

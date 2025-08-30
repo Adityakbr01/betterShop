@@ -38,6 +38,20 @@ body {
   box-sizing: border-box;
 }
 
+/* Custom animations for enhanced UX */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

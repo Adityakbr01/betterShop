@@ -7,7 +7,7 @@ import SearchButton from "./SearchButton";
 import Logo from "./Logo";
 import UserActions from "./UserActions";
 
-const DEFAULT_SEARCH = "T shirt"; // Default search value
+export const DEFAULT_SEARCH = "T shirt"; // Default search value
 
 export default function Navbar() {
     const [cartOpen, setCartOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
             <header
-                className="w-full fixed top-0 z-50 bg-white text-black font-NeuMechina"
+                className="w-full fixed top-0 z-50 font-NeuMechina bg-white"
                 role="banner"
             >
                 <nav
