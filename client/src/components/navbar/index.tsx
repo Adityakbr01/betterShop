@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
             <header
-                className="w-full fixed top-0 z-50 font-NeuMechina bg-white"
+                className="w-full fixed top-0 z-50 font-NeuMechina bg-white text-black"
                 role="banner"
             >
                 <nav

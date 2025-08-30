@@ -4,7 +4,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 
-const Scene = dynamic(() => import("../3d/Scene"), { ssr: false });
+const Scene = dynamic(() => import("@/components/3d/Scene"), { ssr: false });
 
 const colors = ["white", "black", "red", "royalblue"];
 

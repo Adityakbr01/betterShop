@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import { useTheme } from "next-themes";
 import { Suspense } from "react";
 import TShirt from "./TShirt";
-import { Skeleton } from "../ui/skeleton";
 
 // Define the Scene component props interface
 interface SceneProps {
