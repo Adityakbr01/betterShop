@@ -7,15 +7,9 @@ if (!config.TWILIO_ACCOUNT_SID || !config.TWILIO_AUTH_TOKEN) {
   throw new ApiError(500, "❌ Twilio credentials not found");
 }
 
-console.log(config.TWILIO_ACCOUNT_SID, config.TWILIO_AUTH_TOKEN);
-
-const client = twilio(
-  config.TWILIO_ACCOUNT_SID,
-  config.TWILIO_AUTH_TOKEN,
-);
+const client = twilio(config.TWILIO_ACCOUNT_SID, config.TWILIO_AUTH_TOKEN);
 
 interface SendOtpOptions {
-  userId: string;
   identifier: string; // 10-digit mobile
   channel: "whatsapp";
   purpose: string;
@@ -49,14 +43,14 @@ export async function sendOtp({
         message: `OTP sent via WhatsApp using ${template} template`
       };
     }
-
     return { success: false, message: "Unsupported channel" };
-  } catch (error: any) {
+  } catch (error) {
     console.error("❌ Error sending OTP:", error);
+    throw new ApiError(500, "Failed to send OTP");
     return {
       success: false,
       message: "Failed to send OTP",
-      error: error.message
+      error
     };
   }
 }

@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 interface JwtPayloadData {
   userId: string;
-  phone?: string;
+  role: string;
   type: "access" | "refresh";
 }
 
@@ -13,12 +13,12 @@ if (!process.env.ACCESS_TOKEN_SECRET || !process.env.REFRESH_TOKEN_SECRET) {
 
 export const createAccessToken = (payload: {
   userId: string;
-  phone: string;
+  role: string;
 }) => {
   return jwt.sign(
     {
       userId: payload.userId,
-      phone: payload.phone,
+      role: payload.role,
       type: "access"
     },
     process.env.ACCESS_TOKEN_SECRET!,
@@ -26,10 +26,14 @@ export const createAccessToken = (payload: {
   );
 };
 
-export const createRefreshToken = (payload: { userId: string }) => {
+export const createRefreshToken = (payload: {
+  userId: string;
+  role: string;
+}) => {
   return jwt.sign(
     {
       userId: payload.userId,
+      role: payload.role,
       type: "refresh"
     },
     process.env.REFRESH_TOKEN_SECRET!,
@@ -44,6 +48,7 @@ export const verifyAccessToken = (token: string): JwtPayloadData => {
       process.env.ACCESS_TOKEN_SECRET!
     ) as JwtPayloadData;
   } catch (err) {
+    console.error(err);
     throw new Error("Invalid or expired access token");
   }
 };
@@ -54,7 +59,8 @@ export const verifyRefreshToken = (token: string): JwtPayloadData => {
       token,
       process.env.REFRESH_TOKEN_SECRET!
     ) as JwtPayloadData;
-  } catch (err) {
+  } catch (_err) {
+    console.error(_err);
     throw new Error("Invalid or expired refresh token");
   }
 };

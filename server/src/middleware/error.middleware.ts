@@ -37,15 +37,15 @@ const errorHandler = (
   let stack: string | undefined;
 
   // Log the raw error to console for debugging
-  console.error('❌ Error caught by middleware:');
+  console.error("❌ Error caught by middleware:");
   console.error(err);
 
   // Handle different error types
   if (err instanceof ZodError) {
     statusCode = 400;
     message = "Validation failed";
-    console.error('Zod validation error:', err.issues);
-    logger.error('Zod validation error:', err.issues);
+    console.error("Zod validation error:", err.issues);
+    logger.error("Zod validation error:", err.issues);
   } else if (err instanceof ApiError) {
     statusCode = err.statusCode;
     message = err.message;
@@ -55,19 +55,19 @@ const errorHandler = (
   } else if (err instanceof Error) {
     message = err.message;
     stack = err.stack;
-    console.error('Standard Error:', err.message);
-    console.error('Stack trace:', err.stack);
-    logger.error('Standard Error:', { message: err.message, stack: err.stack });
+    console.error("Standard Error:", err.message);
+    console.error("Stack trace:", err.stack);
+    logger.error("Standard Error:", { message: err.message, stack: err.stack });
   } else if (typeof err === "object" && err !== null) {
     const customError = err as ICustomError;
     statusCode = customError.statusCode ?? statusCode;
     message = customError.message ?? message;
     stack = customError.stack;
-    console.error('Custom Error:', customError);
-    logger.error('Custom Error:', customError);
+    console.error("Custom Error:", customError);
+    logger.error("Custom Error:", customError);
   } else {
-    console.error('Unknown error type:', typeof err, err);
-    logger.error('Unknown error type:', { type: typeof err, error: err });
+    console.error("Unknown error type:", typeof err, err);
+    logger.error("Unknown error type:", { type: typeof err, error: err });
   }
 
   // Log request details
@@ -76,18 +76,18 @@ const errorHandler = (
     url: req.originalUrl,
     statusCode,
     message,
-    userAgent: req.get('User-Agent'),
+    userAgent: req.get("User-Agent"),
     ip: req.ip,
     timestamp: new Date().toISOString()
   };
 
-  console.error('Request details:', errorDetails);
+  console.error("Request details:", errorDetails);
   logger.error(`[${req.method}] ${req.originalUrl} - ${message}`, errorDetails);
 
   // Log stack trace in development
   if (process.env.NODE_ENV !== "production" && stack) {
-    console.error('Stack trace:', stack);
-    logger.error('Stack trace:', stack);
+    console.error("Stack trace:", stack);
+    logger.error("Stack trace:", stack);
   }
 
   // Send error response

@@ -15,4 +15,5 @@ Here is your secure code: 👉 *${code}* 👈
   otp_minimal: (purpose: string, code: string) =>
     `Code: *${code}*  
 Use this to verify your *${purpose}*. Expires in 5 min.`
+
 };

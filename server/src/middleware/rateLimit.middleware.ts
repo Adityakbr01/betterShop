@@ -4,7 +4,7 @@ const rateLimitMiddleware = rateLimit({
   max: 100,
   standardHeaders: true,
   legacyHeaders: false,
-  handler: (req, res) => {
+  handler: (_req, res) => {
     res.status(429).json({
       success: false,
       message: "Too many requests, please try again later."

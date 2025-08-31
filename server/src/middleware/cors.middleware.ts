@@ -1,5 +1,4 @@
 import cors from "cors";
-import { config } from "@/config";
 
 const allowedOrigins = [
   "http://localhost:3000", // Next.js dev

@@ -12,7 +12,7 @@ const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)/;
 
 // Register with mobile
 export const registerWithMobileSchema = z.object({
-  mobileNumber: z
+  phoneNumber: z
     .string()
     .min(1, { message: "Mobile number is required" })
     .regex(mobileRegex, {
@@ -23,7 +23,7 @@ export const registerWithMobileSchema = z.object({
 
 // Verify mobile with OTP
 export const verifyMobileSchema = z.object({
-  mobileNumber: z
+  phoneNumber: z
     .string()
     .min(1, { message: "Mobile number is required" })
     .regex(mobileRegex, { message: "Invalid mobile number format" }),
@@ -32,7 +32,7 @@ export const verifyMobileSchema = z.object({
 
 // Complete registration
 export const completeRegistrationSchema = z.object({
-  mobileNumber: z
+  phoneNumber: z
     .string()
     .min(1, { message: "Mobile number is required" })
     .regex(mobileRegex, { message: "Invalid mobile number format" }),
@@ -53,7 +53,7 @@ export const completeRegistrationSchema = z.object({
 
 // Resend mobile OTP
 export const resendMobileOtpSchema = z.object({
-  mobileNumber: z
+  phoneNumber: z
     .string()
     .min(1, { message: "Mobile number is required" })
     .regex(mobileRegex, { message: "Invalid mobile number format" })
@@ -82,8 +82,8 @@ export const sendEmailOtpSchema = z.object({
 });
 
 // Mobile param
-export const mobileNumberParamSchema = z.object({
-  mobileNumber: z
+export const phoneNumberParamSchema = z.object({
+  phoneNumber: z
     .string()
     .regex(mobileRegex, { message: "Invalid mobile number format" })
 });
