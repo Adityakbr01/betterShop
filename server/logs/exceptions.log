@@ -1,0 +1,1327 @@
+[2025-08-31 08:04:38] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:05:00] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:05:30] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:06:58] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:07:03] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:07:12] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:08:27] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:09:39] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:11:55] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:13:52] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:16:33] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:17:40] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:18:13] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:18:59] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:19:17] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:19:33] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:20:01] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:20:17] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:20:29] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:20:49] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:21:20] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:21:53] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:24:08] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:24:16] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:24:25] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:25:23] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:25:30] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:28:26] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:29:44] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:30:56] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:33:24] [31merror[39m: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m1[0m:[93m20[0m - [91merror[0m[90m TS2306: [0mFile 'C:/Users/adity/Desktop/betterShop/server/src/config/database.ts' is not a module.
+
+[7m1[0m import prisma from "@/config/database";
+[7m [0m [91m                   ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m58[0m - [91merror[0m[90m TS2307: [0mCannot find module '@prisma/client' or its corresponding type declarations.
+
+[7m14[0m import { OtpPurpose, OtpType, RoleKey, UserStatus } from "@prisma/client";
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m47[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'OTP_RESEND_COOLDOWN_MS' does not exist on type '{ PORT: string | number; HOST: string; NODE_ENV: string; CORS_ORIGIN: string; DATABASE_POOL_SIZE: string | undefined; MONGODB_URL: string; JWT_REFRESH_EXPIRES_IN: string; JWT_ACCESS_EXPIRES_IN: string; ... 9 more ...; TWILIO_WHATSAPP_NUMBER: string | undefined; }'.
+
+[7m47[0m         createdAt: { gte: new Date(Date.now() - config.OTP_RESEND_COOLDOWN_MS) }
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m167[0m       permissions.map(permission =>
+[7m   [0m [91m                      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 08:53:49] [31merror[39m: Error: Cannot find module '@routes/index'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:54:14] [31merror[39m: Error: Cannot find module '@routes/index'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:54:36] [31merror[39m: Error: Cannot find module '@routes/index'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:55:41] [31merror[39m: Error: Cannot find module '@routes/index'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:56:13] [31merror[39m: Error: Cannot find module '@routes/index'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:57:52] [31merror[39m: Error: Cannot find module '@routes/'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:57:57] [31merror[39m: Error: Cannot find module '@'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:57:58] [31merror[39m: Error: Cannot find module '@/'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\app.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:02] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:05] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:23] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:40] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:42] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:45] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:55] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:58:58] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 08:59:50] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:00:05] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:00:09] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:00:12] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:00:17] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:00:31] [31merror[39m: Error: Cannot find module '@prisma/client'
+Require stack:
+- C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\auth.controller.ts
+- C:\Users\adity\Desktop\betterShop\server\src\controllers\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts
+- C:\Users\adity\Desktop\betterShop\server\src\routes\index.ts
+- C:\Users\adity\Desktop\betterShop\server\src\app.ts
+- C:\Users\adity\Desktop\betterShop\server\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\@cspotcode+source-map-support@0.8.1\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\tsconfig-paths@4.2.0\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\services\auth.service.ts:13:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+[2025-08-31 09:01:09] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:16:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:12] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:16:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:30] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:21:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:33] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:26:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:36] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:31:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:40] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:37:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:45] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:41:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:48] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:45:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:51] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:50:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:01:56] [31merror[39m: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:50:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:02:01] [31merror[39m: Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:53:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:02:03] [31merror[39m: Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:53:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:03:30] [31merror[39m: Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:52:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:03:36] [31merror[39m: Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\express@4.21.2\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:52:8)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[2025-08-31 09:04:02] [31merror[39m: ReferenceError: authenticate is not defined
+    at Object.<anonymous> (C:\Users\adity\Desktop\betterShop\server\src\routes\auth.route.ts:52:19)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module.m._compile (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\adity\Desktop\betterShop\server\node_modules\.pnpm\ts-node@10.9.2_@types+node@20.19.11_typescript@5.9.2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)

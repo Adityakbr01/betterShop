@@ -1,0 +1,1 @@
+// middlewares/authorize.ts
