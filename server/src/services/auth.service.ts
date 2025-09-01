@@ -11,69 +11,56 @@ import {
   setRefreshToken,
   getRefreshToken
 } from "@/utils/redisUtil";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { sendOtp } from "./otp/whatsappOtp";
 
 const OTP_LENGTH = parseInt(config.DEFAOULT_OTP_LENGTH as string, 10);
 const OTP_EXPIRY_MS = parseInt(config.OTP_EXPIRY_MS as string, 10);
-const OTP_RESEND_COOLDOWN_MS = parseInt(
-  config.OTP_RESEND_COOLDOWN_MS as string,
-  10
-);
+const OTP_RESEND_COOLDOWN_MS = parseInt(config.OTP_RESEND_COOLDOWN_MS as string, 10);
 const OTP_RESEND_LIMIT = parseInt(config.OTP_RESEND_LIMIT as string, 10);
 const JWT_REFRESH_EXPIRES_INSeconds = 30 * 24 * 60 * 60; // 30 days in seconds
 
+
+interface RefreshTokenPayload extends JwtPayload {
+  userId: string;
+  role: "user" | "admin";
+  type: "refresh";
+}
+
 // -------------------- OTP / MOBILE REGISTRATION --------------------
 export const sendMobileOtpService = async (phoneNumber: string) => {
-  const normalized = phoneNumber
+  const normalized = phoneNumber.trim();
   const existingUser = await User.findOne({ phoneNumber: normalized });
-  if (existingUser) throw new ApiError(409, "Phone number already registered");
+  if (existingUser) {
+    throw new ApiError(409, "Phone number already registered");
+  }
 
   const otpKey = `otp:${normalized}`;
-  const tsKey = `otp_ts:${normalized}`;
   const rateKey = `otp_rate:${normalized}`;
-  // Rate limiting check
-  const limited = await isRateLimited(
-    rateKey,
-    OTP_RESEND_LIMIT,
-    OTP_RESEND_COOLDOWN_MS / 1000
-  );
-  if (limited)
-    throw new ApiError(429, "OTP resend limit reached or cooldown active");
 
-  const lastSentStr = await getOTP(tsKey);
-  const lastSent = lastSentStr ? parseInt(lastSentStr, 10) : 0;
-  if (Date.now() - lastSent < OTP_RESEND_COOLDOWN_MS) {
-    throw new ApiError(429, "Please wait before requesting another OTP");
-  }
+  // Rate limiting
+  const limited = await isRateLimited(rateKey, OTP_RESEND_LIMIT, OTP_RESEND_COOLDOWN_MS / 1000);
+  if (limited) throw new ApiError(429, "OTP resend limit reached. Please wait.");
 
   const code = generateOtp({ length: OTP_LENGTH });
   await setOTP(otpKey, code, OTP_EXPIRY_MS / 1000);
-  await setOTP(tsKey, Date.now().toString(), OTP_EXPIRY_MS / 1000);
-  console.log(normalized)
+
   await sendOtp({
     identifier: normalized,
     channel: "whatsapp",
     purpose: "Registration",
-    code
+    code,
   });
 
   return { message: "OTP sent", phoneNumber: normalized };
 };
-export const verifyMobileOtpService = async (
-  phoneNumber: string,
-  otp: string
-) => {
-  const normalized = phoneNumber
+export const verifyMobileOtpService = async (phoneNumber: string, otp: string) => {
+  const normalized = phoneNumber.trim();
   const otpKey = `otp:${normalized}`;
-  const tsKey = `otp_ts:${normalized}`;
 
   const storedOtp = await getOTP(otpKey);
   if (!storedOtp) throw new ApiError(400, "OTP expired or not found");
   if (storedOtp !== otp) throw new ApiError(400, "Invalid OTP");
-
-  await deleteOTP(otpKey);
-  await deleteOTP(tsKey);
 
   return { message: "Mobile verified" };
 };
@@ -82,34 +69,37 @@ export const completeRegistrationService = async (params: {
   phoneNumber: string;
   email: string;
   password: string;
-  address?: [];
+  address?: string[];
 }) => {
-  const normalizedPhone = params.phoneNumber
+  const normalizedPhone = params.phoneNumber.trim();
   const normalizedEmail = params.email.trim().toLowerCase();
 
+  // Ensure mobile is verified
   const otpKey = `otp:${normalizedPhone}`;
   const verified = await getOTP(otpKey);
-  if (!verified)
-    throw new ApiError(400, "Mobile not verified for this registration");
+  if (!verified) throw new ApiError(400, "Mobile not verified for registration");
 
   const existingEmail = await User.findOne({ email: normalizedEmail });
   if (existingEmail) throw new ApiError(409, "Email already registered");
 
+  // Create user
   const user = await User.create({
     email: normalizedEmail,
     password: params.password,
     phoneNumber: normalizedPhone,
     isPhoneVerified: true,
     isEmailVerified: false,
-    address: params.address || []
+    address: params.address || [],
   });
 
   await deleteOTP(otpKey);
 
+  // Generate tokens
   const accessToken = createAccessToken({ userId: user.id, role: user.role });
   const refreshToken = createRefreshToken({ userId: user.id, role: user.role });
   user.refreshToken = refreshToken;
   await user.save();
+
   return { user, accessToken, refreshToken };
 };
 // -------------------- LOGIN --------------------
@@ -121,7 +111,9 @@ export const loginWithEmailService = async (
   const user = await User.findOne({ email: normalizedEmail }).select(
     "+password"
   );
-  if (!user) throw new ApiError(401, "Invalid credentials");
+
+  console.log(user);
+  if (!user) throw new ApiError(404, "Invalid credentials");
 
   const ok = await user.comparePassword(password); // implement password compare
   if (!ok) throw new ApiError(401, "Invalid credentials");
@@ -130,8 +122,11 @@ export const loginWithEmailService = async (
   const refreshToken = createRefreshToken({ userId: user.id, role: user.role });
   user.refreshToken = refreshToken;
   await user.save();
-  await setRefreshToken(user.id, refreshToken, JWT_REFRESH_EXPIRES_INSeconds); //
-  return { user, accessToken, refreshToken };
+  // ✅ Save refresh token only in Redis (not DB)
+  await setRefreshToken(user.id.toString(), refreshToken, JWT_REFRESH_EXPIRES_INSeconds);
+  //remove password and refrshToken
+const { password: _password, refreshToken: _refreshToken, ...safeUser } = user.toObject();
+return { user: safeUser, accessToken, refreshToken };
 };
 export const sendMobileLoginOtpService = async (phoneNumber: string) => {
   const normalized = phoneNumber
@@ -194,26 +189,34 @@ export const verifyMobileLoginOtpService = async (
 // -------------------- REFRESH TOKEN --------------------
 export const refreshTokenService = async (token: string) => {
   try {
-    // Verify the refresh token
-    const payload = jwt.verify(token, config.REFRESH_TOKEN_SECRET) as {
-      sub: string;
-    };
+    // ✅ Verify and decode refresh token
+    const payload = jwt.verify(
+      token,
+      config.REFRESH_TOKEN_SECRET
+    ) as RefreshTokenPayload;
 
-    // Find the user
-    const user = await User.findById(payload.sub);
-    if (!user) throw new ApiError(401, "Invalid token");
+    if (payload.type !== "refresh") {
+      throw new ApiError(401, "Invalid token type");
+    }
 
-    // Check if the refresh token exists in storage (Redis)
-    const storedToken = await getRefreshToken(user.id);
+    // ✅ Check if token exists in Redis
+    const storedToken = await getRefreshToken(payload.userId);
     if (!storedToken || storedToken !== token) {
       throw new ApiError(401, "Invalid or expired refresh token");
     }
+    // ✅ Find user
+    const user = await User.findById(payload.userId);
+    if (!user) throw new ApiError(401, "User not found");
 
-    // Generate new tokens
-    const accessToken = createAccessToken({ userId: user.id, role: user.role });
+    // ✅ Generate new access token
+    const accessToken = createAccessToken({
+      userId: user.id,
+      role: user.role,
+    });
+
     return { user, accessToken };
   } catch (err) {
-    console.error(err);
+    console.error("Refresh token error:", err);
     throw new ApiError(401, "Invalid or expired refresh token");
   }
 };

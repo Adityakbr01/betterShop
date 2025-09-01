@@ -11,6 +11,7 @@ import {
   verifyMobileOtpService
 } from "@/services/auth.service";
 import { wrapAsync } from "@/utils/wrapAsync";
+import { accessCookieOptions, refreshCookieOptions } from "@/config/cookieConfig";
 
 export const authController = {
   registerWithMobile: wrapAsync(async (req: Request, res: Response) => {
@@ -33,6 +34,7 @@ export const authController = {
       address?: [];
     };
     const data = await completeRegistrationService({ phoneNumber, email, password, address });
+    res.cookie("refreshToken", data.refreshToken, refreshCookieOptions);
     ApiResponder.success(res, 201, "User registered", data);
   }),
 
@@ -45,7 +47,11 @@ export const authController = {
   loginWithEmail: wrapAsync(async (req: Request, res: Response) => {
     const { email, password } = req.body as { email: string; password: string };
     const data = await loginWithEmailService(email, password);
-    ApiResponder.success(res, 200, "User logged in", data);
+    res.cookie("refreshToken", data.refreshToken, refreshCookieOptions);
+    ApiResponder.success(res, 200, "User logged in", {
+      user: data.user,
+      accessToken: data.accessToken,
+    });
   }),
 
   sendMobileLoginOtp: wrapAsync(async (req: Request, res: Response) => {
@@ -57,13 +63,15 @@ export const authController = {
   verifyMobileLoginOtp: wrapAsync(async (req: Request, res: Response) => {
     const { phoneNumber, otp } = req.body as { phoneNumber: string; otp: string };
     const data = await verifyMobileLoginOtpService(phoneNumber!, otp);
+     res.cookie("refreshToken", data.refreshToken, refreshCookieOptions);
     ApiResponder.success(res, 200, "User logged in", data);
   }),
 
   refreshToken: wrapAsync(async (req: Request, res: Response) => {
-    const { refreshToken: rt } = req.body as { refreshToken: string };
-    const tokens = await refreshTokenService(rt);
-    ApiResponder.success(res, 200, "Tokens refreshed", tokens);
+    const { refreshToken: rt } = req.cookies;
+    const data = await refreshTokenService(rt);
+    res.cookie("accessToken", data.accessToken, accessCookieOptions);
+    ApiResponder.success(res, 200, "Tokens refreshed", data);
   }),
 
   getMe: wrapAsync(async (req: Request, res: Response) => {

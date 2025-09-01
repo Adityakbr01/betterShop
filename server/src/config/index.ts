@@ -35,6 +35,10 @@ export const config = {
   TWILIO_PHONE_NUMBER: process.env.TWILIO_PHONE_NUMBER,
   TWILIO_WHATSAPP_NUMBER: process.env.TWILIO_WHATSAPP_NUMBER,
 
+  // Resend Configuration
+  RESEND_API_KEY: process.env.RESEND_API_KEY,
+  FROM_EMAIL: process.env.FROM_EMAIL || "onboarding@resend.dev",
+
   // OTP Configuration
   OTP_RESEND_COOLDOWN_MS: process.env.OTP_RESEND_COOLDOWN_MS || 60000, // 60 seconds
   OTP_RESEND_LIMIT: process.env.OTP_RESEND_LIMIT || 5, // 5 times per phone

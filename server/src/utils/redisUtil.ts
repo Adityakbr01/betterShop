@@ -22,6 +22,24 @@ export const deleteOTP = async (key: string): Promise<void> => {
   await redis.del(key);
 };
 
+// ----------------- User Verified Flag -----------------
+export const setUserVerified = async (
+  userId: string,
+  verified: boolean,
+  expirySeconds: number
+): Promise<void> => {
+  await redis.set(`verified:${userId}`, verified ? "1" : "0", "EX", expirySeconds);
+};
+
+export const isUserVerified = async (userId: string): Promise<boolean> => {
+  const val = await redis.get(`verified:${userId}`);
+  return val === "1";
+};
+
+export const deleteUserVerified = async (userId: string): Promise<void> => {
+  await redis.del(`verified:${userId}`);
+};
+
 // ----------------- Refresh Token -----------------
 export const setRefreshToken = async (
   userId: string,
@@ -31,9 +49,7 @@ export const setRefreshToken = async (
   await redis.set(`refresh:${userId}`, token, "EX", expirySeconds);
 };
 
-export const getRefreshToken = async (
-  userId: string
-): Promise<string | null> => {
+export const getRefreshToken = async (userId: string): Promise<string | null> => {
   return await redis.get(`refresh:${userId}`);
 };
 
@@ -50,9 +66,7 @@ export const setUserSession = async (
   await redis.set(`user:${userId}`, sessionData, "EX", expirySeconds);
 };
 
-export const getUserSession = async (
-  userId: string
-): Promise<string | null> => {
+export const getUserSession = async (userId: string): Promise<string | null> => {
   return await redis.get(`user:${userId}`);
 };
 
