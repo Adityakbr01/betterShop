@@ -7,11 +7,15 @@ import { AccountMenu } from "./AccountMenu";
 interface Props {
     isOpen: boolean;
     onClose: () => void;
-    user:any
+    user: any
 }
 
-export function MobileDrawer({ isOpen, onClose,user }: Props) {
+export function MobileDrawer({ isOpen, onClose, user }: Props) {
     const drawerRef = useRef<HTMLDivElement>(null);
+
+      let handleClickOutside = () => {
+    onClose();
+  };
 
     // Close when clicking outside
     useEffect(() => {
@@ -87,7 +91,7 @@ export function MobileDrawer({ isOpen, onClose,user }: Props) {
                             </svg>
                         </button>
 
-                        <AccountMenu user={user}/>
+                        <AccountMenu handleClickOutside={handleClickOutside}  user={user} />
                     </motion.div>
                 </>
             )}

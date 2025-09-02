@@ -14,6 +14,9 @@ export function DesktopPopover({
   user:any
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  let handleClickOutside = () => {
+    onClose();
+  };
 
   // Outside click close
   useEffect(() => {
@@ -39,9 +42,9 @@ export function DesktopPopover({
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -10, scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="absolute right-8 top-10 z-50 w-64 bg-white rounded-md shadow-md border p-4"
+          className="absolute right-8 top-10 z-50 w-72 bg-white rounded-md shadow-md border p-4"
         >
-          <AccountMenu user={user}/>
+          <AccountMenu handleClickOutside={handleClickOutside} user={user}/>
         </motion.div>
       )}
     </AnimatePresence>

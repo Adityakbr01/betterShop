@@ -3,7 +3,7 @@
 import { FC, useState, useRef, useEffect } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { useAuthMutations } from "@/hooks/useAuth"
+import { useAuthMutations } from "@/api/useAuthApi";
 import { toast } from "react-hot-toast"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -64,7 +64,6 @@ export const EmailLoginForm: FC = () => {
       toast.success(res?.message ?? "Signed in successfully", { id: toastId })
       useAuthStore.getState().setUser(res.data?.user)
       useAuthStore.getState().setAccessToken(res?.data?.accessToken!)
-      console.log(res)
     } catch (error: any) {
       console.error("Email login failed:", error)
       toast.dismiss(toastId)

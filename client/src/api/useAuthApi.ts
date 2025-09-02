@@ -1,6 +1,6 @@
 "use client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import api from "../api/axios";
+import api from "./axios";
 import { useAuthStore } from "../store/auth";
 import { useRouter } from "next/navigation";
 
@@ -25,9 +25,7 @@ interface VerifyMobileRequest {
 interface CompleteRegistrationRequest {
   phoneNumber: string;
   email: string;
-  password: string;
-  address?: string[];
-  name:string
+  name: string
 }
 
 interface LoginEmailRequest {
@@ -62,6 +60,32 @@ interface VerificationResponse {
   tempToken?: string;
 }
 
+interface SendEmailVerificationOtpResponse {
+  tempToken?: string;
+  remainingAttempts?: number;
+  message?: string;
+}
+
+interface VerifyEmailRequest {
+  email: string;
+  otp: string;
+}
+
+interface SendEmailVerificationOtpRequest {
+  email: string;
+}
+
+
+interface AddAddressRequest {
+  street: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  country: string;
+  addressId?: string; // for editing
+}
+
+
 // Typed API Response Types
 type RegisterMobileResponse = ApiResponse<OtpResponse>;
 type VerifyMobileResponse = ApiResponse<VerificationResponse>;
@@ -70,6 +94,7 @@ type ResendOtpResponse = ApiResponse<OtpResponse>;
 type LoginEmailResponse = ApiResponse<AuthTokens>;
 type SendMobileLoginOtpResponse = ApiResponse<OtpResponse>;
 type VerifyMobileLoginOtpResponse = ApiResponse<AuthTokens>;
+type VerifyEmailResponse = ApiResponse<AuthTokens>;
 
 export const useAuthMutations = () => {
   const { setUser, setAccessToken } = useAuthStore();
@@ -136,6 +161,37 @@ export const useAuthMutations = () => {
     onSuccess: handleAuthSuccess,
   });
 
+
+  //send otp for email Verification
+  const sendEmailVerificationOtp = useMutation<SendEmailVerificationOtpResponse, Error, SendEmailVerificationOtpRequest>({ //email take
+    mutationFn: async (data: SendEmailVerificationOtpRequest) => {
+      const response = await api.post<SendEmailVerificationOtpResponse>("/auth/login/email/send-otp", data);
+      return response.data;
+    },
+  });
+
+  //Verify email
+  const verifyEmail = useMutation<VerifyEmailResponse, Error, VerifyEmailRequest>({ //email,otp take
+    mutationFn: async (data: VerifyEmailRequest) => {
+      const response = await api.post<VerifyEmailResponse>("/auth/login/email/verify", data);
+      return response.data;
+    },
+    onSuccess: handleAuthSuccess,
+  });
+
+  //add addresses
+  const addAddress = useMutation<any, Error, AddAddressRequest>({
+    mutationFn: async (data: AddAddressRequest) => {
+      const response = await api.post<any>("/auth/me/addresses", data);
+      return response.data;
+    },
+     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["user"] });
+    },
+  });
+
+
+
   return {
     registerMobile,
     verifyMobile,
@@ -144,5 +200,8 @@ export const useAuthMutations = () => {
     loginWithEmail,
     sendMobileLoginOtp,
     verifyMobileLoginOtp,
+    sendEmailVerificationOtp,
+    verifyEmail,
+    addAddress,
   };
 };

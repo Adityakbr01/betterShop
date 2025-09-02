@@ -5,19 +5,26 @@ import { Button } from "@/components/ui/button";
 import { CiUser } from "react-icons/ci";
 import { CONFIG } from "@/config/_config";
 
-export function AccountMenu({ user }: { user: any }) {
+export function AccountMenu({ user, handleClickOutside }: { user: any, handleClickOutside: () => void }) {
 
     return (
         <div>
             {/* Header */}
             <header className="mb-4">
                 <h2 className="text-lg font-semibold">Account</h2>
+                {
+                    user && (
+                        <p className="text-zinc-400">
+                            {user.email}
+                        </p>
+                    )
+                }
             </header>
 
             {/* Sign in */}
-            {!user &&(
+            {!user && (
                 <div className="mb-4">
-                    <Link href={CONFIG.CONSTANT.ROUTES.SIGNIN}>
+                    <Link href={CONFIG.CONSTANT.ROUTES.SIGNIN} onClick={handleClickOutside}>
                         <Button className="w-full">Sign In</Button>
                     </Link>
                 </div>
@@ -29,7 +36,8 @@ export function AccountMenu({ user }: { user: any }) {
                     <li className="w-full">
                         <Link
                             href="/orders"
-                            className="flex w-full items-center gap-2 px-3 py-2 rounded-md border bg-gray-100 hover:bg-gray-200 transition"
+                            onClick={handleClickOutside}
+                            className="flex w-full items-center gap-2 px-3 py-2 rounded-md border bg-gray-100 hover:bg-foreground hover:text-white transition"
                         >
                             {/* Orders Icon */}
                             <svg
@@ -55,8 +63,9 @@ export function AccountMenu({ user }: { user: any }) {
                     </li>
                     <li className="w-full">
                         <Link
-                            href="/profile"
-                            className="flex items-center gap-2 px-3 py-2 rounded-md border bg-gray-100 hover:bg-gray-200 transition"
+                            href={CONFIG.CONSTANT.ROUTES.PROFILE}
+                            onClick={handleClickOutside}
+                            className="flex items-center gap-2 px-3 py-2 rounded-md border bg-gray-100 hover:bg-foreground hover:text-white transition"
                         >
                             <CiUser size={20} />
                             Profile

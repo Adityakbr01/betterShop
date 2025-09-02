@@ -3,11 +3,13 @@
 import { FC } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { useAuthMutations } from "@/hooks/useAuth"
+import { useAuthMutations } from "@/api/useAuthApi";
+
 import { toast } from "react-hot-toast"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useAuthStore } from "@/store/auth"
 
 // ✅ Zod schema for OTP validation
 const otpSchema = z.object({
@@ -53,6 +55,8 @@ export const MobileLoginOtpForm: FC<MobileLoginOtpFormProps> = ({
       })
       toast.success(res?.message ?? "Verified — signed in", { id: toastId })
       setOtp(data.otp) // ✅ persist otp in parent state
+      useAuthStore.getState().setUser(res.data?.user)
+      useAuthStore.getState().setAccessToken(res?.data?.accessToken!)
     } catch (error: any) {
       console.error("Mobile OTP verification failed:", error)
       toast.dismiss(toastId)

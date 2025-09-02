@@ -3,7 +3,8 @@
 import { FC } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { useAuthMutations } from "@/hooks/useAuth"
+import { useAuthMutations } from "@/api/useAuthApi";
+
 import { toast } from "react-hot-toast"
 import { useForm } from "react-hook-form"
 import { z } from "zod"

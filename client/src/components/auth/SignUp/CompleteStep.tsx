@@ -1,25 +1,21 @@
 "use client";
 
 import { FC } from "react";
-import { useAuthMutations } from "@/hooks/useAuth";
+import { useAuthMutations } from "@/api/useAuthApi";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useAuthStore } from "@/store/auth";
 
 const completeSchema = z
   .object({
     name: z.string().min(2, "Name is too short"),
     email: z.string().email("Invalid email"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
-    confirmPassword: z.string(),
   })
-  .refine((data) => data.password === data.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Passwords do not match",
-  });
 
 type CompleteForm = z.infer<typeof completeSchema>;
 
@@ -35,9 +31,7 @@ export const CompleteStep: FC<CompleteStepProps> = ({ phoneNumber, setStep }) =>
     resolver: zodResolver(completeSchema),
     defaultValues: {
       name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      email: ""
     },
   });
 
@@ -48,10 +42,13 @@ export const CompleteStep: FC<CompleteStepProps> = ({ phoneNumber, setStep }) =>
         phoneNumber,
         name: data.name,
         email: data.email,
-        password: data.password,
       });
       toast.success(res.message || "Account created successfully", { id: toastId });
       localStorage.removeItem("signup_email");
+      localStorage.removeItem("signup_phone");
+      localStorage.removeItem("signup_step");
+      useAuthStore.getState().setUser(res.data?.user)
+      useAuthStore.getState().setAccessToken(res?.data?.accessToken!)
     } catch {
       toast.dismiss(toastId);
     }
@@ -75,23 +72,6 @@ export const CompleteStep: FC<CompleteStepProps> = ({ phoneNumber, setStep }) =>
         </p>
       )}
 
-      <Input type="password" placeholder="Password" {...form.register("password")} />
-      {form.formState.errors.password && (
-        <p className="text-red-500 text-sm">
-          {form.formState.errors.password.message}
-        </p>
-      )}
-
-      <Input
-        type="password"
-        placeholder="Confirm Password"
-        {...form.register("confirmPassword")}
-      />
-      {form.formState.errors.confirmPassword && (
-        <p className="text-red-500 text-sm">
-          {form.formState.errors.confirmPassword.message}
-        </p>
-      )}
 
       <Button
         type="submit"

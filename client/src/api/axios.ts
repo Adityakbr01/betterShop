@@ -70,6 +70,7 @@ api.interceptors.response.use(
       else if (status === 409) toast.error(error?.response?.data?.message || "Bad request");
       else if (status === 404) toast.error(error?.response?.data?.message || "Bad request");
       else if (status === 401) toast.error(error?.response?.data?.message || "Bad request");
+      else if (status === 403) toast.error(error?.response?.data?.message || "Bad request");
     } else {
       toast.error("Network error, check your connection");
     }

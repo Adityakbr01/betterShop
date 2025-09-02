@@ -1,7 +1,8 @@
 "use client";
 
 import { FC } from "react";
-import { useAuthMutations } from "@/hooks/useAuth";
+import { useAuthMutations } from "@/api/useAuthApi";
+
 import { SignUpStep } from "./SignUp";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

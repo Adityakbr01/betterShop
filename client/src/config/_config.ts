@@ -3,6 +3,7 @@ export const CONFIG = {
     ROUTES:{
         SIGNIN:"/auth/SignIn",
         SIGNUP:"/auth/SignUp",
+        PROFILE : "/auth/Profile"
     }
   }
 };
