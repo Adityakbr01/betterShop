@@ -126,7 +126,6 @@ export async function sendOTPEmail({
     if (error) {
       throw new Error(`Resend error: ${error.message}`);
     }
-
     console.log(`✅ ${purpose} OTP email sent:`, data.id);
     return { success: true, messageId: data.id };
   } catch (error) {
