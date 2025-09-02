@@ -9,9 +9,21 @@ interface AuthState {
   clearAuth: () => void;
 }
 
+// ✅ Safe get from localStorage
+const getUserFromLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    try {
+      return JSON.parse(localStorage.getItem("user") || "null");
+    } catch {
+      return null;
+    }
+  }
+  return null;
+};
+
 export const useAuthStore = create<AuthState>((set) => ({
   accessToken: null,
-  user: JSON.parse(localStorage.getItem("user") || "null"),
+  user: getUserFromLocalStorage(),
   setAccessToken: (token) => set({ accessToken: token }),
   setUser: (user) => {
     set({ user });
@@ -21,6 +33,8 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   clearAuth: () => {
     set({ accessToken: null, user: null });
-    if (typeof window !== "undefined") localStorage.removeItem("user");
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("user");
+    }
   },
 }));
