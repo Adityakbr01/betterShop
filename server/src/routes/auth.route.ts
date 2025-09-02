@@ -2,10 +2,13 @@ import { Router } from "express";
 import { validateSchema } from "@/middleware/validate";
 import { authenticate } from "@/middleware/auth.middleware";
 import {
+  addAddressSchema,
   completeRegistrationSchema,
   loginWithEmailSchema,
   registerWithMobileSchema,
   resendMobileOtpSchema,
+  sendEmailOtpSchema,
+  verifyEmailSchema,
   verifyMobileSchema
 } from "@/validators/auth.validator";
 import { Controllers } from "@/controllers";
@@ -57,8 +60,34 @@ router.post(
   authController.verifyMobileLoginOtp
 );
 
+
+// --------------------- Email Verification --------------------
+router.post(
+  "/login/email/send-otp",
+  authenticate,
+  validateSchema(sendEmailOtpSchema),
+  authController.sendEmailVerificationOtp
+);
+
+router.post(
+  "/login/email/verify",
+  authenticate,
+  validateSchema(verifyEmailSchema),
+  authController.verifyEmail
+);
+
+
+// --------------------- add address --------------------
+router.post(
+  "/me/addresses",
+  authenticate,
+  validateSchema(addAddressSchema),
+  authController.addAddress
+);
+
 // -------------------- Token & profile --------------------
 router.post("/token/refresh", authController.refreshToken);
 router.get("/me", authenticate, authController.getMe);
+router.post("/me/logout", authenticate, authController.logout);
 
 export default router;

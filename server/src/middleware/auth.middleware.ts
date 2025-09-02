@@ -11,10 +11,11 @@ declare module "express" {
 }
 
 interface JwtPayload {
-  sub: string;
   role: string;
   iat?: number;
   exp?: number;
+  userId?: string;
+  type:string
 }
 
 export const authenticate = async (
@@ -24,7 +25,6 @@ export const authenticate = async (
 ) => {
   try {
     let token: string | undefined;
-
     // Check for token in cookies first
     if (req.cookies && req.cookies.accessToken) {
       token = req.cookies.accessToken;
@@ -47,12 +47,13 @@ export const authenticate = async (
       config.ACCESS_TOKEN_SECRET as jwt.Secret
     ) as JwtPayload;
 
-    if (!decoded.sub) {
+    
+    if (!decoded.userId) {
       throw new ApiError(401, "Invalid token payload");
     }
 
     // Add userId and user to request object
-    req.userId = decoded.sub;
+    req.userId = decoded.userId;
     req.role = decoded.role;
 
     next();

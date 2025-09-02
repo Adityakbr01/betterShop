@@ -36,7 +36,6 @@ const addressSchema = new Schema<Address>(
     country: { type: String, required: true, trim: true },
     isDefault: { type: Boolean, default: false }
   },
-  { _id: false }
 );
 
 const userSchema = new Schema<IUser>(
@@ -57,7 +56,7 @@ const userSchema = new Schema<IUser>(
     },
     password: {
       type: String,
-      required: true,
+      required: false,
       minlength: 6,
       select: false
     },

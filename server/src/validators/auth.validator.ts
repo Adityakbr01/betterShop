@@ -48,7 +48,7 @@ export const completeRegistrationSchema = z.object({
     .min(1, { message: "Email is required" })
     .email({ message: "Invalid email format" })
     .trim()
-    .toLowerCase()
+    .toLowerCase()  
 });
 
 // Resend mobile OTP
@@ -109,4 +109,15 @@ export const loginWithEmailSchema = z.object({
     .min(2, { message: "password must be at least 5 characters long" })
     .max(50, { message: "password must not exceed 20 characters" })
     .regex(passwordRegex, { message: "password" })
+});
+
+//addresses
+export const addAddressSchema = z.object({
+  street: z.string().min(2).max(100),
+  city: z.string().min(2).max(100),
+  state: z.string().min(2).max(100),
+  postalCode: z.string().min(2).max(20),
+  country: z.string().min(2).max(100),
+  isDefault: z.boolean().optional(),
+  addressId: z.string().optional()
 });
