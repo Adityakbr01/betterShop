@@ -8,6 +8,8 @@ export interface Address {
   postalCode: string;
   country: string;
   isDefault?: boolean;
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface IUser extends Document {
@@ -34,7 +36,9 @@ const addressSchema = new Schema<Address>(
     state: { type: String, required: true, trim: true },
     postalCode: { type: String, required: true, trim: true },
     country: { type: String, required: true, trim: true },
-    isDefault: { type: Boolean, default: false }
+    isDefault: { type: Boolean, default: false },
+    latitude: { type: Number },
+    longitude: { type: Number }
   },
 );
 

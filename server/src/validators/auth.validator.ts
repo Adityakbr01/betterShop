@@ -119,5 +119,7 @@ export const addAddressSchema = z.object({
   postalCode: z.string().min(2).max(20),
   country: z.string().min(2).max(100),
   isDefault: z.boolean().optional(),
-  addressId: z.string().optional()
+  addressId: z.string().optional(),
+  latitude: z.number().min(-90).max(90).optional(),
+  longitude: z.number().min(-180).max(180).optional()
 });
