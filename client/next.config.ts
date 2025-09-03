@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         hostname: "picsum.photos", // your domain or CDN host
         pathname: "/**", // allow all paths
       },
+      {
+        protocol: "https", // or "http" if your CDN uses it
+        hostname: "images.unsplash.com", // your domain or CDN host
+        pathname: "/**", // allow all paths
+      },
+      {
+        protocol: "https", // or "http" if your CDN uses it
+        hostname: "em-content.zobj.net", // your domain or CDN host
+        pathname: "/**", // allow all paths
+      },
     ]
   }
 };

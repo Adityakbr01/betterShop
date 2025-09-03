@@ -46,7 +46,7 @@ export default function Account() {
 
       {/* Cart button */}
       <button
-        className="relative"
+        className="relative cursor-pointer"
         aria-label="Open cart"
         onClick={() => setIsCartOpen(true)}
       >

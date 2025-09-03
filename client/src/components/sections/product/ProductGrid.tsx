@@ -32,13 +32,13 @@ export function ProductCard({ product, index, isMobile, springConfig }: ProductC
       key={product.id}
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ 
-        ...springConfig, 
+      transition={{
+        ...springConfig,
         delay: 0.9 + (index * 0.1),
         type: "spring",
         stiffness: 100
       }}
-      whileHover={{ 
+      whileHover={{
         scale: isMobile ? 1.02 : 1.05,
         y: isMobile ? -2 : -5,
         transition: { duration: 0.2 }
@@ -48,13 +48,13 @@ export function ProductCard({ product, index, isMobile, springConfig }: ProductC
       <div className="relative h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
         {/* Placeholder content with loading animation */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer" />
-        
+
         {/* Product placeholder */}
         <div className="absolute inset-4 bg-gray-300/50 rounded-md" />
-        
+
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-        
+
         {/* Product info placeholder */}
         <div className="absolute bottom-4 left-4 right-4 space-y-2">
           <div className="h-3 bg-gray-400/60 rounded w-3/4" />
@@ -96,13 +96,15 @@ interface ProductGridProps {
   viewMode?: "grid" | "list";
 }
 
-export default function ProductGrid({ 
-  products, 
-  isMobile, 
+export default function ProductGrid({
+  products,
+  isMobile,
   springConfig,
   viewMode = "grid"
 }: ProductGridProps) {
   const hasProducts = products.length > 0;
+
+  console.log("Products in Grid:", products);
 
   return (
     <motion.div
@@ -110,21 +112,15 @@ export default function ProductGrid({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ...springConfig, delay: 0.8 }}
       className={`
-        ${viewMode === "grid" 
-          ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6" 
+        ${viewMode === "grid"
+          ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
           : "flex flex-col gap-4"
         }
       `}
     >
-      {hasProducts ? (
-        products.map((product, index) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            index={index}
-            isMobile={isMobile}
-            springConfig={springConfig}
-          />
+      {products?.length > 0 ? (
+        products?.map((product, index) => (
+          <ProductCard springConfig={springConfig} index={index} isMobile={isMobile} product={product} key={product.id} />
         ))
       ) : (
         <div className="col-span-full">

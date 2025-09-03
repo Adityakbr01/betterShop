@@ -1,11 +1,10 @@
 "use client";
-
-import { SlidersHorizontal } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import ProductsHeader from "./ProductsHeader";
 import { AvailabilityFilter, ItemsCount, LoadingIndicator, PriceRangeFilter, SortSelect, ViewToggle } from "./FilterSection";
 import ProductGrid from "./ProductGrid";
+
 
 export default function Products() {
   // State management

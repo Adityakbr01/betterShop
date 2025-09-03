@@ -83,6 +83,9 @@ interface AddAddressRequest {
   postalCode: string;
   country: string;
   addressId?: string; // for editing
+  isDefault?: boolean; // to set as default address
+  latitude?: number; // for latitude
+  longitude?: number; // for longitude
 }
 
 

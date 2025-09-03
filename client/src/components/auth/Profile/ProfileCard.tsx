@@ -41,6 +41,10 @@ const ProfileCard = ({
         setEditingAddress({ ...addr, addressId: addr._id });
         setOpenAddressDialog(true);
     };
+
+ //  latitude?: number; // for latitude
+//   longitude?: number; // for longitude
+
     return (
         <Card>
             <CardHeader>
