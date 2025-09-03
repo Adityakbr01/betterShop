@@ -72,11 +72,11 @@ export default function Hero2() {
               />
 
               {/* Text on top */}
-              <span className="relative z-10 py-0 px-2">New</span>
+              <span className="relative z-10 py-0 px-2">Discover</span>
             </span>
-            Spring Collection
+            Premium Style
             <span className="block relative mt-2 text-4xl sm:text-5xl lg:text-6xl font-semibold">
-              Just
+                Your
               <span className="relative inline-block">
                 {/* Animated background */}
                 <motion.span
@@ -88,7 +88,7 @@ export default function Hero2() {
                 />
 
                 {/* Text on top */}
-                <span className="relative z-10 text-white px-1">Arrived</span>
+                <span className="relative z-10 text-white px-1">Way</span>
               </span>
 
             </span>
@@ -97,8 +97,7 @@ export default function Hero2() {
             variants={childVariants}
             className="mt-4 text-base sm:text-lg text-gray-700"
           >
-            Explore our latest men's essentials and elevate your style with
-            timeless designs.
+           Clothing, Jewelry & Lifestyle essentials — curated with elegance.
           </motion.p>
           <motion.div
             variants={childVariants}

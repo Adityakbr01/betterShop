@@ -125,9 +125,9 @@ const ProfileCard = ({
                     }}
                 >
                     <DialogTrigger asChild>
-                        {me?.addresses?.length < 2 && (
+                      
                             <Button>Add Address</Button>
-                        )}
+                    
 
                     </DialogTrigger>
                     <DialogContent>
